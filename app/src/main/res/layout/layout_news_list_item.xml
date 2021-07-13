@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:minHeight="80dp">
+
+    <ImageView
+        android:id="@+id/newsIV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/grey_circle_bg"
+        android:scaleType="center" />
+
+    <RelativeLayout
+        android:id="@+id/newsDetailsRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toStartOf="@+id/arrowIV"
+        android:layout_toEndOf="@id/newsIV">
+
+        <TextView
+            android:id="@+id/newsTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="heading 1 is to test test test"
+            android:textColor="@color/dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/newsSubTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newsTitleTV"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="heading 1 is to test test test"
+            android:textColor="@color/slate_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newsSubTitleTV"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="THOMSON"
+            android:textAllCaps="true"
+            android:textColor="@color/slate_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/dateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newsSubTitleTV"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/svg_calendar_icon"
+            android:drawablePadding="5dip"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="24-12-1990"
+            android:textColor="@color/slate_grey"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/arrowIV"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        app:srcCompat="@drawable/svg_right_arrow" />
+</RelativeLayout>
+
+
+
+
+

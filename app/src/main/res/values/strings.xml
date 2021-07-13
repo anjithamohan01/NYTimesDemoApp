@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NYTimesDemoApp</string>
+    <string name="no_network_error_message">Network not Available!!</string>
+</resources>
