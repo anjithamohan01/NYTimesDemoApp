@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -14,25 +12,18 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.anjitha.nytimesdemoapp.R;
-import com.anjitha.nytimesdemoapp.models.Result;
+import com.anjitha.nytimesdemoapp.databinding.FragmentNewsListBinding;
 import com.anjitha.nytimesdemoapp.newslist.viewmodel.NewsListViewModel;
 import com.anjitha.nytimesdemoapp.response.NewsListResponse;
 import com.anjitha.nytimesdemoapp.utils.Utils;
-import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class NewsListFragment extends Fragment {
     private NewsListViewModel viewModel;
     private NewsListAdapter adapter;
-    private RecyclerView rvNewsList;
     private LinearLayoutManager layoutManager;
-    private ArrayList<Result> newsArrayList;
-    private ProgressBar progressBar;
+    private FragmentNewsListBinding binding;
 
 
     @Override
@@ -44,10 +35,9 @@ public class NewsListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_news_list, container, false);
 
-        rvNewsList = view.findViewById(R.id.rvNewsList);
-        progressBar = view.findViewById(R.id.progressBar);
+        binding = FragmentNewsListBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
         initialization();
         getNewsArticles();
         return view;
@@ -56,12 +46,12 @@ public class NewsListFragment extends Fragment {
     private void initialization() {
 
         layoutManager = new LinearLayoutManager(getActivity());
-        rvNewsList.setLayoutManager(layoutManager);
-        rvNewsList.setHasFixedSize(true);
+        binding.rvNewsList.setLayoutManager(layoutManager);
+        binding.rvNewsList.setHasFixedSize(true);
 
         // adapter
         adapter = new NewsListAdapter();
-        rvNewsList.setAdapter(adapter);
+        binding.rvNewsList.setAdapter(adapter);
 
         // View Model initialization
         viewModel = ViewModelProviders.of(this).get(NewsListViewModel.class);
@@ -76,7 +66,7 @@ public class NewsListFragment extends Fragment {
                 @Override
                 public void onChanged(NewsListResponse response) {
                     if (response != null) {
-                        progressBar.setVisibility(View.GONE);
+                        binding.progressBar.setVisibility(View.GONE);
                         adapter.setResults(response.getResults());
                     }
                 }
