@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">NYTimesDemoApp</string>
     <string name="no_network_error_message">Network not Available!!</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="nav_menu1">Menu item1</string>
+    <string name="nav_menu2">Menu item2</string>
+    <string name="nav_menu3">Menu item3</string>
 </resources>

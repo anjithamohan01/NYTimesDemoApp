@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@android:color/transparent"
-    android:minHeight="80dp">
+    android:minHeight="100dp">
 
     <ImageView
         android:id="@+id/newsIV"
@@ -44,6 +44,7 @@
             android:layout_below="@+id/newsTitleTV"
             android:ellipsize="end"
             android:maxLines="1"
+            android:layout_marginTop="10dp"
             android:text="heading 1 is to test test test"
             android:textColor="@color/slate_grey"
             android:textSize="12sp" />
@@ -57,6 +58,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:text="THOMSON"
+            android:layout_toLeftOf="@+id/dateTV"
             android:textAllCaps="true"
             android:textColor="@color/slate_grey"
             android:textSize="12sp" />
