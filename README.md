@@ -6,6 +6,16 @@ In this project we will build list of news articles which is frequently visited 
 
 App will list the most frequently user visited secions in NY times.
 
+Uses MVVM as design pattern with live data
+
+Uses viewbinding to take view references
+
+Added navigation component
+
+Glide library to  display imagages
+
+uses junit and mokito for unit testing
+
 <h2>Setting Up</h2>
 
 Step-1 : Download this project on your local machine.
