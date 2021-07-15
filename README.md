@@ -45,7 +45,9 @@ Step-4: Run the application.
 •	mokito
 
 
+<h2>Screenshots</h2>
 
+![Alt text](app/src/screenshot/newsList.PNG?raw=true "News Image")
 
 
  
